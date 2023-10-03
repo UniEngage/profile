@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+#prof-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: ease 1s;
+    text-align: center;
+}
+
+#prof-id {
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    transition: ease 1s;
+}
+
+#prof-college {
+    font-weight: 400;
+    text-align: center;
+    transition: ease 1s;
+}
+
+body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #E5CFF7;
+}
+
+/*Profile information*/
+
+.profile-section {
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.prof-pic {
+    background: url(https://media.istockphoto.com/vectors/profile-icon-male-avatar-portrait-casual-person-vector-id530829125?k=6&m=530829125&s=612x612&w=0&h=Z76VH4c_W2aJ6UdUnjuCtLssjlFVNwNEns5VVNpH1Mg=);
+    background-size: cover;
+    border-radius: 50%;
+    transition: linear .5s;
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.prof-info {
+    display: none;
+}
+
+.navigation {
+    position: relative;
+    height: 100vh;
+    width: 70px;
+    background-color: #5B0888;
+    box-shadow: 10px 0 0 #713ABE;
+    border-left: 5px solid #5B0888;
+    overflow-x: hidden;
+    transition: ease .5s;
+}
+
+.navigation:hover {
+    width: 300px;
+
+    .prof-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .prof-pic {
+        height: 100px;
+        width: 100px;
+        transition: linear .2s;
+    }
+
+    .profile-section {
+        transition: ease .5s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.navigation ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.navigation ul li.active {
+    background-color: #713ABE;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    color: #fff;
+}
+
+.navigation ul li.active a::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    /* background-color: transparent; */
+    border-radius: 50%;
+    box-shadow: 15px 15px 0px #713ABE;
+}
+
+.navigation ul li.active a::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    /* background-color: blanchedalmond; */
+    border-radius: 50%;
+    box-shadow: 15px -15px 0px #713ABE;
+
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navigation ul li a .icon ion-icon {
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.navigation ul li.active {
+    background-color: #713ABE;
+}
