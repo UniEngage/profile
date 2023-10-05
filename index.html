@@ -13,43 +13,164 @@
                 <div class="prof-pic">
                 </div>
                 <div class="prof-info">
-                    <h1 id="prof-name">Bhavishya Khunger</h1>
-                    <h5 id="prof-college">(Punjab Engineering College, Chandigarh)</h5>
+                    <h1 id="prof-name">Chirag Gupta</h1>
+                    <h5 id="prof-college">(Thapar Institite of Engineering and Technology, Patiala)</h5>
                     <h5 id="prof-id">ID: C65323</h5>
                 </div>
+                <span id="edit-profile"><span class="edit-icon"><ion-icon name="create-sharp"></ion-icon></span>Edit Profile</span>
+                <div class="qr-code"></div>
                 
             </div>
-            <li class="list active">
+            <li class="list active" id="dashboard-btn">
                 <a href="#">
                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                    <span class="title">Home</span>
+                    <span class="title">Dashboard</span>
                 </a>
             </li>
-            <li class="list">
+            <li class="list" id="events-btn">
                 <a href="#">
                     <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
-                    <span class="title">Events</span>
+                    <span class="title">My Events</span>
                 </a>
             </li>
-            <li class="list">
+            <li class="list" id="engage-btn">
+                <a href="#">
+                    <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                    <span class="title">Engage</span>
+                </a>
+            </li>
+            <li class="list" id="unipoints-btn">
                 <a href="#">
                     <span class="icon"><ion-icon name="wallet-outline"></ion-icon></span>
-                    <span class="title">Wallet</span>
+                    <span class="title">UniPoints</span>
                 </a>
             </li>
-            <li class="list">
+            <li class="list" id="chng-password-btn">
                 <a href="#">
                     <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
                     <span class="title">Change Password</span>
                 </a>
             </li>
-            <li class="list">
+            <li class="list" id="log-out-btn">
                 <a href="#">
                     <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
                     <span class="title">Sign Out</span>
                 </a>
             </li>
         </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="navbar-top">
+            <button type="button">Log Out</button>
+        </div>
+
+        <div class="content-area" id="dashboard-area">
+            Dashboard
+        </div>
+
+        <div class="content-area" id="events-area">
+            Events
+        </div>
+
+        <div class="content-area" id="engage-area">
+            Engage
+        </div>
+
+        <div class="content-area" id="unipoints-area">
+            UniPoints
+        </div>
+    </div>
+
+    <div class="profile-page">
+        <div id="column-one-pp" class="columns-pp">
+            <div class="prof-pic" id="prof-pic-card">
+            </div>
+            <span class="change-photo"><ion-icon name="image-outline"></ion-icon> Change Photo</span>
+            <div id="personalinfo-name">
+                <input type="text" class="personal-input" id="name-pp" value="Chirag Gupta">
+                <label for="personalinfo-name">Full Name: <span style="color: red;">*</span></label>
+            </div>
+            <div id="personalinfo-email">
+                <input type="email" class="personal-input" id="mail-pp" value="bhavishyakhunger.bt23ele@pec.edu.in" disabled>
+                <label for="personalinfo-email">Email: <span style="color: red;">*</span></label>
+            </div>
+        </div>
+        <div id="column-two-pp" class="columns-pp">
+            <div id="personalinfo-college">
+                <input type="text" class="personal-input" id="college-pp" value="Thapar Institute of Engineering and Technology (TIET), Patiala">
+                <label for="personalinfo-college">School/College: <span style="color: red;">*</span></label>
+            </div>
+        </div>
+
+        <div id="column-three-pp" class="columns-pp">
+            <div id="personalinfo-phone">
+                <input type="number" class="personal-input" id="phone-pp" value="8360463500">
+                <button id="verify-number">Verify</button>
+                <label for="personalinfo-phone">Mobile: <span style="color: red;">*</span></label>
+            </div>
+            <select name="sex" id="personalinfo-sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other-sex">Other</option>
+                <option value="prefer-not" selected>Prefer Not to Say</option>
+            </select>
+            <label for="personalinfo-sex" id="sex-pp">Sex: <span style="color: red;">*</span></label>
+        </div>
+
+        <div id="column-three-pp" class="columns-pp">
+            <div id="personalinfo-phone">
+                <input type="number" class="personal-input" id="phone-pp" value="8360463500">
+                <button id="verify-number">Verify</button>
+                <label for="personalinfo-phone">Mobile: <span style="color: red;">*</span></label>
+            </div>
+            <select name="sex" id="personalinfo-sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other-sex">Other</option>
+                <option value="prefer-not" selected>Prefer Not to Say</option>
+            </select>
+            <label for="personalinfo-sex" id="sex-pp">Sex: <span style="color: red;">*</span></label>
+        </div>
+
+        <div id="column-three-pp" class="columns-pp">
+            <div id="personalinfo-phone">
+                <input type="number" class="personal-input" id="phone-pp" value="8360463500">
+                <button id="verify-number">Verify</button>
+                <label for="personalinfo-phone">Mobile: <span style="color: red;">*</span></label>
+            </div>
+            <select name="sex" id="personalinfo-sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other-sex">Other</option>
+                <option value="prefer-not" selected>Prefer Not to Say</option>
+            </select>
+            <label for="personalinfo-sex" id="sex-pp">Sex: <span style="color: red;">*</span></label>
+        </div>
+
+        <div id="column-three-pp" class="columns-pp">
+            <div id="personalinfo-phone">
+                <input type="number" class="personal-input" id="phone-pp" value="8360463500">
+                <button id="verify-number">Verify</button>
+                <label for="personalinfo-phone">Mobile: <span style="color: red;">*</span></label>
+            </div>
+            <select name="sex" id="personalinfo-sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other-sex">Other</option>
+                <option value="prefer-not" selected>Prefer Not to Say</option>
+            </select>
+            <label for="personalinfo-sex" id="sex-pp">Sex: <span style="color: red;">*</span></label>
+        </div>
+
+        <div id="column-last-pp" class="columns-pp">
+            <button type="submit" id="submit-pp">Update Changes</button>
+        </div>
+        
+    </div>
+
+    <div class="change-password">
+        aisa password rkha hi kyu tha ki badme badalna pde
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
