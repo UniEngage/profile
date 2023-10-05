@@ -5,7 +5,7 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
-    color: #fff;
+    color: #000;
 }
 
 #prof-name {
@@ -30,20 +30,34 @@
 
 body {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: #E5CFF7;
+    background-color: #f6f6f9;
 }
+
 
 /*Profile information*/
 
+.qr-code {
+    height: 120px;
+    width: 120px;
+    background: url( https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=BhavishyaKhunger_ID:C65323);
+    background-size: cover;
+    background-color: black;
+    /* filter: blur(3px); */
+    display: none;
+    margin-top: 15px;
+    transition: ease .5s;
+}
+
 .profile-section {
-    padding-left: 10px;
+    padding-left: 6px;
     margin-bottom: 20px;
 }
 
 .prof-pic {
-    background: url(https://media.istockphoto.com/vectors/profile-icon-male-avatar-portrait-casual-person-vector-id530829125?k=6&m=530829125&s=612x612&w=0&h=Z76VH4c_W2aJ6UdUnjuCtLssjlFVNwNEns5VVNpH1Mg=);
+    background: url(https://media.licdn.com/dms/image/D4D03AQHIK0zZw1sTSw/profile-displayphoto-shrink_200_200/0/1688563341281?e=1701907200&v=beta&t=dQ7pmidlcQm1rvm4D3yJh9IveWrdRoEyhqj3RzCpgus);
     background-size: cover;
     border-radius: 50%;
     transition: linear .5s;
@@ -56,22 +70,72 @@ body {
 }
 
 .prof-info {
+    pointer-events: none;
     display: none;
+}
+
+#edit-profile {
+    display: none;
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #3347cc;
+    gap: 4px;
+}
+
+.edit-icon ion-icon {
+    font-size: 1rem;
+    color: #fff;
 }
 
 .navigation {
     position: relative;
     height: 100vh;
     width: 70px;
-    background-color: #5B0888;
-    box-shadow: 10px 0 0 #713ABE;
-    border-left: 5px solid #5B0888;
+    background-color: #fff;
+    box-shadow: 10px 0 0 #3347cc;
+    border-left: 5px solid #fff;
+    border-right: 2px solid #3347cc;;
+    /* border-left: 2px solid #3347cc; */
     overflow-x: hidden;
     transition: ease .5s;
+    box-shadow: 0rem 2rem 3rem rgba(132, 139, 200, 0.18);
+    /* pointer-events: none; */
 }
+
+.active .title {
+        color: #fff;
+    }
+
+    .active a .icon ion-icon {
+    color: white;
+}
+
+/* Scrollbar */
+
+.navigation::-webkit-scrollbar {
+    width: 3px;
+}
+
+.navigation::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px transparent;;
+    border-radius: 10px;
+}
+
+.navigation::-webkit-scrollbar-thumb {
+    background-color: #3347cc;
+    border-radius: 8px;
+}
+
+.navigation::-webkit-scrollbar-thumb:hover {
+    background: rgba(132, 139, 200, 0.18);
+}
+/* Scrollbar End */
 
 .navigation:hover {
     width: 300px;
+    border-right: none;
 
     .prof-info {
         display: flex;
@@ -86,6 +150,10 @@ body {
         transition: linear .2s;
     }
 
+    .prof-pic:hover {
+        box-shadow: 1px 1px 5px black;
+    }
+
     .profile-section {
         transition: ease .5s;
         display: flex;
@@ -93,6 +161,38 @@ body {
         align-items: center;
         justify-content: center;
     }
+    
+    .qr-code {
+        display: block;
+    }
+    
+    .qr-code:hover {
+        transition: ease .5s;
+        box-shadow: 1px 1px 5px black;
+    }
+
+    #edit-profile {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        margin: 8px 0px 5px 0px;
+        align-items: center;
+        transition: ease .5s;
+    }
+    
+    #edit-profile:hover {
+        box-shadow: 1px 1px 2px black;
+    }
+
+    .main-content {
+        width: calc(100vw - 300px);
+    }
+}
+
+.list:hover {
+    background-color: #f6f7fe;
 }
 
 .navigation ul {
@@ -100,7 +200,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding-left: 5px;
+    padding-left: 6px;
     padding-top: 40px;
 }
 
@@ -113,7 +213,7 @@ body {
 }
 
 .navigation ul li.active {
-    background-color: #713ABE;
+    background-color: #3347cc;
 }
 
 .navigation ul li a {
@@ -134,7 +234,7 @@ body {
     height: 30px;
     /* background-color: transparent; */
     border-radius: 50%;
-    box-shadow: 15px 15px 0px #713ABE;
+    box-shadow: 15px 15px 0px #3347cc;
 }
 
 .navigation ul li.active a::after {
@@ -146,8 +246,8 @@ body {
     height: 30px;
     /* background-color: blanchedalmond; */
     border-radius: 50%;
-    box-shadow: 15px -15px 0px #713ABE;
-
+    box-shadow: 15px -15px 0px #3347cc;
+    
 }
 
 .navigation ul li a .icon {
@@ -175,5 +275,287 @@ body {
 }
 
 .navigation ul li.active {
-    background-color: #713ABE;
+    background-color: #3347cc;
+}
+
+.main-content {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2px;
+    /* background-color: aqua; */
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.navbar-top {
+    width: 100%;
+    height: 55px;
+    background-color: #3347cc;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1.5rem;
+    position: sticky;
+    /* z-index: 1; */
+}
+
+.content-area {
+    width: 100%;
+    height: calc(100vh - 55px);
+    /* background-color: red; */
+    position: relative;
+    overflow-y: auto;
+}
+
+/* Main Coding */
+
+#dashboard-area {
+    display: flex;
+}
+
+#events-area {
+    display: none;
+}
+
+#unipoints-area {
+    display: none;
+}
+
+#engage-area {
+    display: none;
+}
+
+/* Pop UP pages */
+
+
+/* Profile Card */
+
+.profile-page {
+    display: none;
+    flex-direction: column;
+    padding: 2%; 
+    background-color: white;
+    left: 25%;
+    /* top: 20%; */
+    border-radius: 20px;
+    box-shadow: 0rem 2rem 3rem rgba(132, 139, 200, 0.18);
+    position: absolute;
+    height: 400px;
+    width: 700px;
+    z-index: 5;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+/* Scrollbar */
+
+.profile-page::-webkit-scrollbar {
+    width: 3px;
+}
+
+.profile-page::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px transparent;;
+    border-radius: 10px;
+}
+
+.profile-page::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 8px;
+}
+
+.profile-page::-webkit-scrollbar-thumb:hover {
+    background: rgba(132, 139, 200, 0.18);
+}
+/* Scrollbar End */
+
+#prof-pic-card {
+    width: 120px;
+    z-index: 6;
+    height: 120px;
+    transition: linear .2s;
+}
+
+.change-photo {
+    height: 20px;
+    width: 7.8rem;
+    background-color: #f6f6f9;
+    cursor: pointer;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    /* background-color: red; */
+    border: 1px solid black;
+    border-radius: 10px;
+    position: absolute;
+    transform: translateY(8rem);
+}
+
+#prof-pic-card:hover {
+    box-shadow: 1px 1px 5px black;
+    scale: 1.1;
+}
+
+#prof-pic-card:active {
+    scale: 2;
+}
+
+#column-one-pp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.personal-input {
+    padding-left: 5px;
+    height: 2rem;
+    font-size: .85rem;
+    width: 15rem;
+    background-color: white;
+    border: 1px solid rgb(117, 113, 113);
+    border-radius: 10px;
+    /* box-shadow: 0rem 2rem 3rem rgba(132, 139, 200, 0.18); */
+}
+
+#personalinfo-name {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    height: fit-content;
+    padding: 5px 0px;
+}
+
+#personalinfo-email {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    height: fit-content;
+    padding: 5px 0px;
+}
+
+#mail-pp {
+    background-color: #f6f6f9;
+}
+
+#personalinfo-name label {
+    position: absolute;
+    background-color: transparent;
+    left: 11rem;
+    transform: translateY(-100%);
+}
+
+#personalinfo-email label {
+    position: absolute;
+    background-color: transparent;
+    left: 28rem;
+    transform: translateY(-100%);
+}
+
+#column-two-pp {
+    display: flex;
+    position: absolute;
+    top: 6rem;
+    left: calc(2rem + 120px);
+}
+
+#personalinfo-college label {
+    position: absolute;
+    left: 1.5rem;
+    transform: translateY(-100%);
+}
+
+#personalinfo-college {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    height: fit-content;
+    padding: 5px 0px;
+}
+
+#college-pp {
+    width: 31.3rem;
+}
+
+#personalinfo-phone {
+    width: fit-content;
+}
+
+#column-three-pp {
+    margin-top: 2.5rem;
+    margin-left: calc(2rem + 110px);
+    display: flex;
+    justify-content: space-between;
+}
+
+#personalinfo-phone label {
+    position: absolute;
+    left: 11rem;
+    transform: translateY(-100%);
+}
+
+#verify-number {
+    position: absolute;
+    left: 22.2rem;
+    transform: translateY(14%);
+    height: 25px;
+    width: 50px;
+    background-color: #03ac13;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    font-size: 0.7rem;
+}
+
+#verify-number:active {
+    cursor: progress;
+}
+
+#personalinfo-sex {
+    padding-left: 5px;
+    height: 2rem;
+    font-size: .85rem;
+    width: 15rem;
+    background-color: white;
+    border: 1px solid rgb(117, 113, 113);
+    border-radius: 10px;
+}
+
+#sex-pp {
+    position: absolute;
+    left: 27.5rem;
+    transform: translateY(-100%);
+}
+
+#column-last-pp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#column-last-pp button {
+    width: 8rem;
+    height: 2rem;
+    border-radius: 20px;
+    color: white;
+    background-color: #3347cc;
+    cursor: pointer;
+    border: 3px solid #3347cc;
+}
+
+/* Password Change Card */
+
+.change-password {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    left: 25%;
+    /* top: 20%; */
+    border-radius: 20px;
+    position: absolute;
+    height: 400px;
+    width: 700px;
 }
